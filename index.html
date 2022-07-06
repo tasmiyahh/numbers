@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .main{
+            width: 30%;
+            margin: 100px auto;
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 5px;
+
+        }
+        h1{
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        button{
+            border-radius: 3px;
+            background-color: green;
+            color: white;
+            border: 2px solid green;
+            font-size: large;
+            text-align: center;
+           
+        }
+
+        button:hover{
+            background-color: rgb(3, 71, 3);
+            box-shadow: 1px 1px 2px 2px green;
+            color: black;
+        }
+
+        #num{
+            border-top: 0;
+            border-left: 0;
+            border-right: 0;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+    <h1>Even And Odd No</h1>
+
+    <form onsubmit="no(); return false; ">
+        <label for="">please enter any number</label>
+        <input type="number" min="1" id="num" required> <br> <br>
+
+
+
+        <button>check</button>
+
+    </form>
+    <p class="result"></p>
+
+    </div>
+
+    <script>
+        function no() {
+            let evenno = document.querySelector("#num").value;
+
+
+            let result = evenno % 2;
+
+            let target = document.querySelector(".result").innerHTML = `you entered ${evenno} and here is the result : <b> ${result} </b> <br> <br>
+            (if result shows 1 it means your entered number was odd , otherwise it was even)`;
+
+
+        }
+    </script>
+</body>
+
+</html>
